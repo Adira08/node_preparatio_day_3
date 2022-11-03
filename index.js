@@ -9,8 +9,8 @@ server.get("/home", (req, res) =>{
     res.send("Hello!");
 })
 
-server.listen(3000, () =>{
-    console.log("server is running at port:8080");
+server.listen(8000, () =>{
+    console.log("server is running at port:8000");
 })
 
 
@@ -61,11 +61,11 @@ const middleware2 = (req,res,next) => {
 app.use(middleware1)//middleware for all application
 
 app.get('/about',(req,res) => {
-  res.send("Paresh Patil")
+  res.send("This is about route")
 })
 
 app.get('/contact',middleware2,(req,res) => {
-  res.send("Harshal")
+  res.send("This is contact route")
 })
 
 
